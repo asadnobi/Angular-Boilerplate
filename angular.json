@@ -36,6 +36,12 @@
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.production.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",
@@ -49,6 +55,14 @@
                 }
               ],
               "outputHashing": "all"
+            },
+            "stagging": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.stagging.ts"
+                }
+              ]
             },
             "development": {
               "buildOptimizer": false,
@@ -66,6 +80,9 @@
           "configurations": {
             "production": {
               "browserTarget": "angular-boilerplate:build:production"
+            },
+            "stagging": {
+              "browserTarget": "angular-boilerplate:build:stagging"
             },
             "development": {
               "browserTarget": "angular-boilerplate:build:development"
